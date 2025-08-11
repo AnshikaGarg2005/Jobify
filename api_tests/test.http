@@ -1,0 +1,40 @@
+### Register
+POST http://localhost:5100/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "lastName": "User",
+  "location": "Delhi",
+  "email": "test@gmail.com",
+  "password": "12345678"
+}
+
+### Login
+POST http://localhost:5100/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "DemoUser123@gmail.com",
+  "password": "physics-myworld"
+}
+
+
+### Show Stats
+GET http://localhost:5100/api/v1/jobs/stats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODk4ZTc4NjAxMjE2NzkwM2JlZGU3MmIiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1NDg1MTIzMywiZXhwIjoxNzU0OTM3NjMzfQ.teYGJsFck0raEsBTKLz9DrbQo9yUgDvaSfr6cxvrBR4
+
+### Get all jobs
+GET http://localhost:5100/api/v1/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODk4ZTc4NjAxMjE2NzkwM2JlZGU3MmIiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1NDg1MTIzMywiZXhwIjoxNzU0OTM3NjMzfQ.teYGJsFck0raEsBTKLz9DrbQo9yUgDvaSfr6cxvrBR4
+### Search only
+GET http://localhost:5100/api/v1/jobs?search=developer
+
+### Job Status only
+GET http://localhost:5100/api/v1/jobs?jobStatus=declined
+
+### Job Type only
+GET http://localhost:5100/api/v1/jobs?jobType=full-time
+
+### Sort only
+GET http://localhost:5100/api/v1/jobs?sort=z-a
